@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TgPhisher Bot</title>
+    <style>
+        /* Общие стили для страницы */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        /* Стиль для кнопки */
+        .bot-button {
+            padding: 15px 30px;
+            background-color: #2b2b2b;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.5s ease;
+        }
+
+        .bot-button:hover {
+            background-color: #3b3b3b;
+        }
+
+        /* Стиль анимированного текста */
+        .animated-text span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            font-size: 24px;
+            transition: all 1s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://t.me/God_TeleBot" class="bot-button">Перейти к боту</a>
+        <div class="animated-text">
+            <span>Добро пожаловать в TgPhisher!</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const button = document.querySelector('.bot-button');
+            const text = document.querySelector('.animated-text span');
+
+            // Плавное появление кнопки
+            setTimeout(function () {
+                button.style.opacity = 1;
+                button.style.transform = 'translateY(0)';
+            }, 500);
+
+            // Плавное появление текста
+            setTimeout(function () {
+                text.classList.add('fade-in');
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
